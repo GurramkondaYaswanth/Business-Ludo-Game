@@ -906,7 +906,7 @@ function display_random_image(n) {
     console.log(imn);
     console.log(preBuffer[imn]);
     //console.log("number", n);
-    rewards(7, n);
+    rewards(imn, n);
     return preBuffer[imn];
   }
   // 0 is first image,   preBuffer.length - 1 is  last image
