@@ -34,6 +34,7 @@ body {
     border-color: black;
     font-size: 1.65em;
     font-weight: 700;
+    background-color: #99ffe6;
 }
 
 #box48 {
@@ -42,7 +43,7 @@ body {
     font-size: 1.8em;
     font-weight: 600;
     padding-left: 10px;
-    background-color: goldenrod;
+/*     background-color: goldenrod; */
 }
 
 .button,
