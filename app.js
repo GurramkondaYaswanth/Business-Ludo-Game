@@ -49,7 +49,7 @@ var box48 = document.querySelector("#box48");
 
 var money = [];
 var k = 0;
-for (var i = 5; i < 240; ) {
+for (var i = 5; i < 240;) {
   money[k++] = i;
   i = i + 5;
 }
@@ -120,10 +120,16 @@ const pawn22 = document.getElementById("magic22");
 pawn22.style.visibility = "hidden";
 const pawn23 = document.getElementById("magic23");
 pawn23.style.visibility = "hidden";
-var T1 = 0;
-var T2 = 0;
-var safeArr1 = [];
-var safeArr2 = [];
+
+alert(
+  "Welcome! to Business Ludo game, at the right side of the screen u will see instructions text, click on that for rules and instructions for playing. If u already know then start the game and enjoy✌️"
+);
+var diceCount1 = 0;
+var diceCount2 = 0;
+var safeArr1 = []; //array for storing the safe box places of team1
+var T1 = 0; //index of safearr1
+var safeArr2 = []; //array for storing the safe box places of team2
+var T2 = 0; //index of safearr2
 //movement of team1 pawns
 const player1 = document.getElementById("player-1");
 
@@ -134,15 +140,23 @@ var person12 = ["player1", -1, 10000, 0, 0]; //team1 pawn2
 var person13 = ["player1", -1, 10000, 0, 0]; //team1 pawn3
 
 function rollDice1() {
-  let position = Math.floor(Math.random() * 6) + 1;
-  console.log("player1 rolls ", position);
-  document.querySelector("#dice").innerHTML = position;
-  person11[3] = position;
-  person12[3] = position;
-  person13[3] = position;
-  magicCard.style.visibility = "visible";
-  pawn1Hidden();
-  pawn2Hidden();
+  diceCount1++;
+  diceCount2 = 0;
+  if (diceCount1 == 1) {
+    let position = Math.floor(Math.random() * 6) + 1;
+    console.log("player1 rolls ", position);
+    document.querySelector("#dice").innerHTML = position;
+    person11[3] = position;
+    person12[3] = position;
+    person13[3] = position;
+    magicCard.style.visibility = "visible";
+    pawn1Hidden();
+    pawn2Hidden();
+  } else {
+    alert(
+      "U can only roll dice once, now player2's chance, if u haven't moved ur pawn u can click on the desired pawn button of urs to move"
+    );
+  }
 }
 //pawn1 team1 position and balance
 const player11 = document.getElementById("player11");
@@ -176,6 +190,10 @@ function changePosition11(old, currentPos) {
     var newPosition = old + currentPos;
     console.log(newPosition);
     pawn11M(newPosition, currentPos);
+  } else if (currentPos != 1 && old < 0) {
+    alert("u can only move the coin when the player rolls dice 1");
+  } else {
+    alert("u have already moved the pawn")
   }
 }
 console.log("endpoint", endpoint1);
@@ -210,6 +228,10 @@ function changePosition12(old, currentPos) {
     count1++;
     var newPosition = old + currentPos;
     pawn12M(newPosition, currentPos);
+  } else if (currentPos != 1 && old < 0) {
+    alert("u can only move the coin when the player rolls dice 1");
+  } else {
+    alert("u have already moved the pawn")
   }
 }
 
@@ -242,6 +264,10 @@ function changePosition13(old, currentPos) {
     count3++;
     var newPosition = old + currentPos;
     pawn13M(newPosition, currentPos);
+  } else if (currentPos != 1 && old < 0) {
+    alert("u can only move the coin when the player rolls dice 1");
+  } else {
+    alert("u have already moved the pawn")
   }
 }
 //movements of pawn after birth
@@ -257,7 +283,7 @@ function pawn11M(newPosition, currentPos) {
     elem.remove();
     endpoint1++;
     console.log("endpoint", endpoint1);
-    document.querySelector("#end1").innerHTML = endpoint1;
+    // document.querySelector("#end1").innerHTML = endpoint1;
     if (endpoint1 == 3) {
       document.querySelector(".item3").innerHTML = "Team1 won";
     }
@@ -329,7 +355,7 @@ function pawn12M(newPosition, currentPos) {
     elem.remove();
     endpoint1++;
     console.log("endpoint", endpoint1);
-    document.querySelector("#end1").innerHTML = endpoint1;
+    // document.querySelector("#end1").innerHTML = endpoint1;
     if (endpoint1 == 3) {
       document.querySelector(".item3").innerHTML = "Team1 won";
     }
@@ -390,6 +416,7 @@ function pawn12M(newPosition, currentPos) {
     changeMoney1(person12[1]);
   }
 }
+
 function pawn13M(newPosition, currentPos) {
   person13[1] = newPosition;
   if (newPosition == 47) {
@@ -401,7 +428,7 @@ function pawn13M(newPosition, currentPos) {
     elem.remove();
     endpoint1++;
     console.log("endpoint", endpoint1);
-    document.querySelector("#end1").innerHTML = endpoint1;
+    // document.querySelector("#end1").innerHTML = endpoint1;
     if (endpoint1 == 3) {
       document.querySelector(".item3").innerHTML = "Team1 won";
     }
@@ -489,15 +516,23 @@ var person22 = ["player2", -1, 10000, 0, 0]; //team2 pawn2
 var person23 = ["player2", -1, 10000, 0, 0]; //team2 pawn3
 
 function rollDice2() {
-  let position = Math.floor(Math.random() * 6) + 1;
-  console.log("player2 rolls ", position);
-  document.querySelector("#dice").innerHTML = position; //dice value
-  person21[3] = position;
-  person22[3] = position;
-  person23[3] = position;
-  magicCard.style.visibility = "visible";
-  pawn1Hidden();
-  pawn2Hidden();
+  diceCount1 = 0;
+  diceCount2++;
+  if (diceCount2 == 1) {
+    let position = Math.floor(Math.random() * 6) + 1;
+    console.log("player2 rolls ", position);
+    document.querySelector("#dice").innerHTML = position; //dice value
+    person21[3] = position;
+    person22[3] = position;
+    person23[3] = position;
+    magicCard.style.visibility = "visible";
+    pawn1Hidden();
+    pawn2Hidden();
+  } else {
+    alert(
+      "U can only roll dice once, now player1's chance, if u haven't moved ur pawn u can click on the desired pawn button of urs to move"
+    );
+  }
 }
 //pawn1 team2 position and money balance
 const player21 = document.getElementById("player21");
@@ -531,6 +566,10 @@ function changePosition21(old, currentPos) {
     count21++;
     var newPosition = old + currentPos;
     pawn21M(newPosition, currentPos);
+  } else if (currentPos != 1 && old < 0) {
+    alert("u can only move the coin when the player rolls dice 1");
+  } else {
+    alert("u have already moved the pawn")
   }
 }
 
@@ -638,6 +677,10 @@ function changePosition22(old, currentPos) {
     count22++;
     var newPosition = old + currentPos;
     pawn22M(newPosition, currentPos);
+  } else if (currentPos != 1 && old < 0) {
+    alert("u can only move the coin when the player rolls dice 1");
+  } else {
+    alert("u have already moved the pawn")
   }
 }
 
@@ -742,6 +785,10 @@ function changePosition23(old, currentPos) {
     count23++;
     var newPosition = old + currentPos;
     pawn23M(newPosition, currentPos);
+  } else if (currentPos != 1 && old < 0) {
+    alert("u can only move the coin when the player rolls dice 1");
+  } else {
+    alert("u have already moved the pawn")
   }
 }
 
@@ -768,7 +815,7 @@ function pawn23M(newPosition, currentPos) {
   } else {
     person23[1] = newPosition;
     document.querySelector("#item23").innerHTML = money[newPosition];
-    var match1 = 0;
+    var match1 = 0; //count of similar elements of the pawn position and safeArr1 
     for (i = 0; i < safeArr1.length; i++) {
       if (person23[1] == safeArr1[i]) {
         match1++;
@@ -847,9 +894,9 @@ function display_random_image1() {
 function display_random_image2() {
   display_random_image(2);
 }
+
 function display_random_image(n) {
-  var theImages = [
-    {
+  var theImages = [{
       src: "./images/1000Coins.png",
       width: "320",
       height: "280",
@@ -921,7 +968,7 @@ function display_random_image(n) {
   }
   // display the image
   magicCard.style.visibility = "hidden";
-  document.body.appendChild(newImage).style.margin = "420px 0px 0px 995px";
+  document.body.appendChild(newImage).style.margin = "420px 0px 0px 1000px";
   console.log(newImage);
   //document.getElementById("image").innerHTML = newImage;//document.body.image.appendChild(newImage);;
   //document.body.write(newImage)
@@ -936,11 +983,13 @@ function rewards(imn, n) {
   if (n == 1) {
     //team1 flip
     flip1++;
+
     console.log("flip", flip1);
     if (flip1 > 6) {
       magicCard.style.visibility = "visible";
-      alert("You can use the magic card for only six times a game");
+      alert("You have used the magic card for maximum number of times in this game i.e 6 times");
     } else {
+      document.querySelector("#card1").innerHTML = flip1;
       var bonusCoins = 0;
       var once = 1;
       if (imn == 0) {
@@ -956,6 +1005,7 @@ function rewards(imn, n) {
         pawn21.addEventListener("click", zero21);
         pawn22.addEventListener("click", zero22);
         pawn23.addEventListener("click", zero23);
+
         function zero21() {
           if (n == 1) {
             person21[1] = -1;
@@ -966,6 +1016,7 @@ function rewards(imn, n) {
             pawn2Hidden();
           }
         }
+
         function zero22() {
           if (n == 1) {
             person22[1] = -1;
@@ -976,6 +1027,7 @@ function rewards(imn, n) {
             pawn2Hidden();
           }
         }
+
         function zero23() {
           if (n == 1) {
             person23[1] = -1;
@@ -1087,6 +1139,7 @@ function rewards(imn, n) {
             }
           }
         }
+
         function zero13() {
           if (imn == 5 && n == 1 && once == 1) {
             once++;
@@ -1136,14 +1189,16 @@ function rewards(imn, n) {
       person12[2] = person12[2] - 500 + bonusCoins;
       person13[2] = person13[2] - 500 + bonusCoins;
       document.querySelector(".item3").innerHTML = person11[2];
+      // alert("You can still use the magic card for " + (6 - flip1) + " times only in this game");
     }
   } else if (n == 2) {
     flip2++;
     console.log("flip2", flip2);
-    if (flip2 > 20) {
+    if (flip2 > 6) {
       magicCard.style.visibility = "visible";
-      alert("You can use the magic card for only six times a game");
+      alert("You have used the magic card for maximum number of times in this game i.e 6 times");
     } else {
+      document.querySelector("#card2").innerHTML = flip2;
       var once = 1;
       var bonusCoins = 0;
       if (imn == 0) {
@@ -1159,6 +1214,7 @@ function rewards(imn, n) {
         pawn11.addEventListener("click", zero11);
         pawn12.addEventListener("click", zero12);
         pawn13.addEventListener("click", zero13);
+
         function zero11() {
           if (n == 2) {
             person11[1] = -1;
@@ -1169,6 +1225,7 @@ function rewards(imn, n) {
             pawn1Hidden();
           }
         }
+
         function zero12() {
           if (n == 2) {
             person12[1] = -1;
@@ -1179,6 +1236,7 @@ function rewards(imn, n) {
             pawn1Hidden();
           }
         }
+
         function zero13() {
           if (n == 2) {
             person13[1] = -1;
@@ -1195,6 +1253,7 @@ function rewards(imn, n) {
         pawn21.addEventListener("click", zero21);
         pawn22.addEventListener("click", zero22);
         pawn23.addEventListener("click", zero23);
+
         function zero21() {
           if (imn == 5 && n == 2 && once == 1) {
             //5 places add
@@ -1286,6 +1345,7 @@ function rewards(imn, n) {
             }
           }
         }
+
         function zero23() {
           if (imn == 5 && n == 2 && once == 1) {
             once++;
@@ -1335,6 +1395,7 @@ function rewards(imn, n) {
       person22[2] = person22[2] - 500 + bonusCoins;
       person23[2] = person23[2] - 500 + bonusCoins;
       document.querySelector(".item4").innerHTML = person21[2];
+      // alert("You can still use the magic card for " + (6 - flip2) + " times only in this game");
     }
   }
 }
@@ -1376,30 +1437,37 @@ function SafeBox() {
   pawn12.addEventListener("click", safe12);
   pawn13.addEventListener("click", safe13);
   var once = 1;
+
   function safe11() {
     var safeNumber = person11[1];
     safeTeam1(safeNumber);
   }
+
   function safe12() {
     var safeNumber = person12[1];
     safeTeam1(safeNumber);
   }
+
   function safe13() {
     var safeNumber = person13[1];
     safeTeam1(safeNumber);
   }
+
   function safe21() {
     var safeNumber = person21[1];
     safeTeam2(safeNumber);
   }
+
   function safe22() {
     var safeNumber = person22[1];
     safeTeam2(safeNumber);
   }
+
   function safe23() {
     var safeNumber = person23[1];
     safeTeam2(safeNumber);
   }
+
   function safeTeam1(safeNumber) {
     if (once == 1) {
       once++;
@@ -1412,6 +1480,7 @@ function SafeBox() {
       arrdiv[safeNumber].style.backgroundColor = "greenyellow";
     }
   }
+
   function safeTeam2(safeNumber) {
     if (once == 1) {
       once++;
