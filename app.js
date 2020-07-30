@@ -154,7 +154,7 @@ function rollDice1() {
     pawn2Hidden();
   } else {
     alert(
-      "U can only roll dice once, now player2's chance, if u haven't moved ur pawn u can click on the desired pawn button of urs to move"
+      "U can only roll dice once, now Team2's chance, if u haven't moved ur pawn u can click on the desired pawn button of urs to move"
     );
   }
 }
@@ -530,7 +530,7 @@ function rollDice2() {
     pawn2Hidden();
   } else {
     alert(
-      "U can only roll dice once, now player1's chance, if u haven't moved ur pawn u can click on the desired pawn button of urs to move"
+      "U can only roll dice once, now Team1's chance, if u haven't moved ur pawn u can click on the desired pawn button of urs to move"
     );
   }
 }
