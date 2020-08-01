@@ -68,15 +68,15 @@
         </div>
         <div class="teams">
             <div class="team1-box" id="team1-box">
-                <img class="pawn" src="./images/img11.jpg" id="img11" onclick alt="dice1" />
-                <img class="pawn" src="./images/img11.jpg" id="img12" alt="dice2" />
-                <img class="pawn" src="./images/img11.jpg" id="img13" alt="dice2" />
+                <img class="pawn" src="./images/img11.png" id="img11" onclick alt="dice1" />
+                <img class="pawn" src="./images/img11.png" id="img12" alt="dice2" />
+                <img class="pawn" src="./images/img11.png" id="img13" alt="dice2" />
             </div>
 
             <div class="team2-box" id="team2-box">
-                <img class="pawn" src="./images/img22.jpg" id="img21" alt="dice1" />
-                <img class="pawn" src="./images/img22.jpg" id="img22" alt="dice2" />
-                <img class="pawn" src="./images/img22.jpg" id="img23" alt="dice2" />
+                <img class="pawn" src="./images/img22.png" id="img21" alt="dice1" />
+                <img class="pawn" src="./images/img22.png" id="img22" alt="dice2" />
+                <img class="pawn" src="./images/img22.png" id="img23" alt="dice2" />
             </div>
         </div>
     </div>
@@ -94,10 +94,13 @@
             <div>(Coins)</div>
         </div>
         <div class="dice roll" id="roll">
-            <p class="player-roll">Player rolls:<div class="player-roll" id="dice">0</div>
+            <p class="player-roll">
+                <div class="player-roll" id="teamName">Player</div>
+                <div class="player-roll">rolls:</div>
+                <div class="player-roll" id="dice">0</div>
+            </p>
         </div>
 
-        </p>
         <div class="pawn-position" id="button1">
             <button class="button" id="player11" onclick>Pawn 1</button>
             <div class="item" id="item11">0</div>
@@ -130,6 +133,7 @@
                 <button class="button T2" id="magic21" onclick>Pawn 1</button>
                 <button class="button T2" id="magic22" onclick>Pawn 2</button>
                 <button class="button T2" id="magic23" onclick>Pawn 3</button>
+
             </div>
 
         </div>
@@ -142,8 +146,8 @@
             <button class="button1" id="safe" onclick>safe box</button>
         </div>
 
-        <button class="open-button" onclick="openForm()">Instructions</button>
-        <button class="open-button" id="but2" onclick="openForm1()"> FAQ's</button>
+        <button class="open-button" id="but1" onclick>Instructions</button>
+        <button class="open-button" id="but2" onclick> FAQ's</button>
 
         <div class="popup" id="myForm">
             <form class="form-container">
@@ -152,10 +156,17 @@
                 <!-- <h2>Instructions</h2> -->
 
                 <h3>Brief about the Game</h3>
-                <p><strong id="Brief">Teams:</strong>2<strong id="Brief">Pawns in a Team:</strong>3<strong id="Brief">Goal:</strong>All 3 pawns reaching the end point. <strong id="Brief">Initial conditon:</strong>roll dice should be 1 for pawn to enter the board</p>
-                <p><strong id="Brief">Challenge1:</strong>Coins will be reduced each time you enter the new Box.<strong id="Brief">How many coins will be reduced:</strong>same as the number displayed on the box</p>
-                <p><strong id="Brief">Challenge2:</strong>If coins become zero then u will lose the game, opponent wins.<strong id="Brief">How to gain coins:</strong>By flipping the magic card we can win 0 to 2000 coins</p>
-                <p><strong id="Brief">Challenge3:</strong>If opponent pawn comes to ur pawn position ur pawn will be killed, and sent to home again.<strong id="Brief">Anyway to be saved:</strong>U can use safe box button to make some of ur desired boxes as safe place</p>
+                <p><strong id="Brief">Teams:</strong>2<strong id="Brief">Pawns in a Team:</strong>3<strong
+                        id="Brief">Goal:</strong>All 3 pawns reaching the end point. <strong id="Brief">Initial
+                        conditon:</strong>roll dice should be 1 for pawn to enter the board.</p>
+                <p><strong id="Brief">Challenge1:</strong>Coins will be reduced each time you enter the new Box.<strong
+                        id="Brief">How many coins will be reduced:</strong>same as the number displayed on the box</p>
+                <p><strong id="Brief">Challenge2:</strong>If coins become zero then u will lose the game, opponent
+                    wins.<strong id="Brief">How to gain coins:</strong>By flipping the magic card we can win 0 to 2000
+                    coins</p>
+                <p><strong id="Brief">Challenge3:</strong>If opponent pawn comes to ur pawn position ur pawn will be
+                    killed, and sent to home again.<strong id="Brief">Anyway to be saved:</strong>U can use safe box
+                    button to make some of ur desired boxes as safe place</p>
 
                 <!-- <p> <strong id="start">1.</strong> Two teams will be there with 3 pawns each, at there homes in the
                     starting, you need to take all of ur 3 pawns to the end point first,
@@ -220,7 +231,8 @@
                 <p><strong id="start"> </strong>After roll dice, You need to select the pawn button
                     corresponding to the desired pawn of ur teams
                     to move. Pawn position will be displayed in the right of every pawn button</p>
-            <p><strong id="start"> </strong>Make sure u choose correct pawn button. once u selected u can't select the other pawn button in any situation</p>
+                <p><strong id="start"> </strong>Make sure u choose correct pawn button. once u selected u can't select
+                    the other pawn button in any situation</p>
                 <!-- <br> -->
                 <h3>Team1/Team2 flip</h3>
 
@@ -232,16 +244,17 @@
                 <p><strong id="start"> </strong>If a team wants to make a box as safe box then they need to click this
                     button and you can buy
                     unlimited number of safe boxes, until u have enough money</p>
-<!-- <br> -->
-                    <p>still any questions refer FAQ's</p>
-                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                <!-- <br> -->
+                <p>still any questions refer FAQ's</p>
+                <button type="button" class="btn cancel" id="close1" onclick>Close</button>
             </form>
         </div>
         <div class="popup" id="myForm1">
             <form class="form-container">
 
                 <h2>FAQ's</h2>
-                
+                <h3>Is box1 (5) is a safe box to both the teams?</h3>
+                <p> yes</p>
                 <h3>How to move the pawn?</h3>
                 <p>After roll dice u need to choose the pawn button to move the desired pawn</p>
                 <br>
@@ -266,7 +279,8 @@
                 <p>safe box: unlimited until u can offord</p>
                 <br>
                 <h3>what happens when opponents pawn is in our safe box and then we arrive at the safe box?</h3>
-                <p>opponent pawn gets killed</p>
+                <p>opponent pawn gets killed and coins displayed on the box will be also reduced from u, as u have paid
+                    for safety only</p>
                 <br>
                 <h3>What happens when there are 2 pawns of same team are there then the opposition pawn comes</h3>
                 <p>Your pawns will be killed unless it is in safe box</p>
@@ -274,30 +288,15 @@
                 <h3>What happens when we reach to end point?</h3>
                 <p>The pawn and pawn releated button disappear</p>
                 <br>
-                <br>
-                <h3>When my pawn is 2 steps away from the endpoint and I got 5 in the roll dice, can I reach to the endpoint?</h3>
-                <p>No, U need to reach the endpoint exactly. You u cannot go out of the board</p>
-                <br>
-                <button type="button" class="btn cancel" onclick="closeForm1()">Close</button>
+                <h3>When my pawn is 2 steps away from the endpoint and I got 5 in the roll dice, can I reach to the
+                    endpoint?</h3>
+                <p>No, U need to reach the endpoint exactly unless if u get +5 or +7 in magic card. You u cannot go out
+                    of the board</p>
+
+                <button type="button" id="close2" class="btn cancel" onclick>Close</button>
             </form>
         </div>
-        <script>
-            function openForm() {
-                document.getElementById("myForm").style.display = "block";
-            }
 
-            function openForm1() {
-                document.getElementById("myForm1").style.display = "block";
-            }
-
-            function closeForm() {
-                document.getElementById("myForm").style.display = "none";
-            }
-
-            function closeForm1() {
-                document.getElementById("myForm1").style.display = "none";
-            }
-        </script>
     </div>
 </body>
 

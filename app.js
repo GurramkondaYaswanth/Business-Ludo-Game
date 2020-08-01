@@ -1,53 +1,53 @@
-var box1 = document.querySelector("#box1");
-var box2 = document.querySelector("#box2");
-var box3 = document.querySelector("#box3");
-var box4 = document.querySelector("#box4");
-var box5 = document.querySelector("#box5");
-var box6 = document.querySelector("#box6");
-var box7 = document.querySelector("#box7");
-var box8 = document.querySelector("#box8");
-var box9 = document.querySelector("#box9");
-var box10 = document.querySelector("#box10");
-var box11 = document.querySelector("#box11");
-var box12 = document.querySelector("#box12");
-var box13 = document.querySelector("#box13");
-var box14 = document.querySelector("#box14");
-var box15 = document.querySelector("#box15");
-var box16 = document.querySelector("#box16");
-var box17 = document.querySelector("#box17");
-var box18 = document.querySelector("#box18");
-var box19 = document.querySelector("#box19");
-var box20 = document.querySelector("#box20");
-var box21 = document.querySelector("#box21");
-var box22 = document.querySelector("#box22");
-var box23 = document.querySelector("#box23");
-var box24 = document.querySelector("#box24");
-var box25 = document.querySelector("#box25");
-var box26 = document.querySelector("#box26");
-var box27 = document.querySelector("#box27");
-var box28 = document.querySelector("#box28");
-var box29 = document.querySelector("#box29");
-var box30 = document.querySelector("#box30");
-var box31 = document.querySelector("#box31");
-var box32 = document.querySelector("#box32");
-var box33 = document.querySelector("#box33");
-var box34 = document.querySelector("#box34");
-var box35 = document.querySelector("#box35");
-var box36 = document.querySelector("#box36");
-var box37 = document.querySelector("#box37");
-var box38 = document.querySelector("#box38");
-var box39 = document.querySelector("#box39");
-var box40 = document.querySelector("#box40");
-var box41 = document.querySelector("#box41");
-var box42 = document.querySelector("#box42");
-var box43 = document.querySelector("#box43");
-var box44 = document.querySelector("#box44");
-var box45 = document.querySelector("#box45");
-var box46 = document.querySelector("#box46");
-var box47 = document.querySelector("#box47");
-var box48 = document.querySelector("#box48");
+const box1 = document.querySelector("#box1");
+const box2 = document.querySelector("#box2");
+const box3 = document.querySelector("#box3");
+const box4 = document.querySelector("#box4");
+const box5 = document.querySelector("#box5");
+const box6 = document.querySelector("#box6");
+const box7 = document.querySelector("#box7");
+const box8 = document.querySelector("#box8");
+const box9 = document.querySelector("#box9");
+const box10 = document.querySelector("#box10");
+const box11 = document.querySelector("#box11");
+const box12 = document.querySelector("#box12");
+const box13 = document.querySelector("#box13");
+const box14 = document.querySelector("#box14");
+const box15 = document.querySelector("#box15");
+const box16 = document.querySelector("#box16");
+const box17 = document.querySelector("#box17");
+const box18 = document.querySelector("#box18");
+const box19 = document.querySelector("#box19");
+const box20 = document.querySelector("#box20");
+const box21 = document.querySelector("#box21");
+const box22 = document.querySelector("#box22");
+const box23 = document.querySelector("#box23");
+const box24 = document.querySelector("#box24");
+const box25 = document.querySelector("#box25");
+const box26 = document.querySelector("#box26");
+const box27 = document.querySelector("#box27");
+const box28 = document.querySelector("#box28");
+const box29 = document.querySelector("#box29");
+const box30 = document.querySelector("#box30");
+const box31 = document.querySelector("#box31");
+const box32 = document.querySelector("#box32");
+const box33 = document.querySelector("#box33");
+const box34 = document.querySelector("#box34");
+const box35 = document.querySelector("#box35");
+const box36 = document.querySelector("#box36");
+const box37 = document.querySelector("#box37");
+const box38 = document.querySelector("#box38");
+const box39 = document.querySelector("#box39");
+const box40 = document.querySelector("#box40");
+const box41 = document.querySelector("#box41");
+const box42 = document.querySelector("#box42");
+const box43 = document.querySelector("#box43");
+const box44 = document.querySelector("#box44");
+const box45 = document.querySelector("#box45");
+const box46 = document.querySelector("#box46");
+const box47 = document.querySelector("#box47");
+const box48 = document.querySelector("#box48");
 
-var money = [];
+var money = []; //for display of coins in each box
 var k = 0;
 for (var i = 5; i < 240;) {
   money[k++] = i;
@@ -55,7 +55,15 @@ for (var i = 5; i < 240;) {
 }
 money[47] = "endpoint";
 console.log(money);
+
+// var arrdiv = [];
+// for (var j = 0; j < 48; j++) {
+//   arrdiv[j] = "box" + (j + 1);
+// }
+// console.log(arrdiv);
+
 var arrdiv = [
+  //each box representations
   box1,
   box2,
   box3,
@@ -106,9 +114,9 @@ var arrdiv = [
   box48,
 ];
 
-const magicCard = document.getElementById("image");
+const magicCard = document.getElementById("image"); //magic card default display id
 
-const pawn11 = document.getElementById("magic11");
+const pawn11 = document.getElementById("magic11"); //pawns used after rolling the magic card
 pawn11.style.visibility = "hidden";
 const pawn12 = document.getElementById("magic12");
 pawn12.style.visibility = "hidden";
@@ -124,7 +132,7 @@ pawn23.style.visibility = "hidden";
 alert(
   "Welcome! to Business Ludo game, at the right side of the screen u will see instructions text, click on that for rules and instructions for playing. If u already know then start the game and enjoy✌️"
 );
-var diceCount1 = 0;
+var diceCount1 = 0; // for counting how many consective times he is pressing the button
 var diceCount2 = 0;
 var safeArr1 = []; //array for storing the safe box places of team1
 var T1 = 0; //index of safearr1
@@ -140,22 +148,61 @@ var person12 = ["player1", -1, 10000, 0, 0]; //team1 pawn2
 var person13 = ["player1", -1, 10000, 0, 0]; //team1 pawn3
 
 function rollDice1() {
+  //roll dice for team1
   diceCount1++;
   diceCount2 = 0;
   if (diceCount1 == 1) {
+    // let template1 =
+    //   '<img src="./images/dice1.png" style="width: 35px" alt="1">';
+    // // '<img src="./images/UnconsciousLegalDoe-size_restricted.gif" style="width: 35px" "background-repeat:no-repeat" id="GIF"  alt=""></img>';
+
+    // document.querySelector("#dice").innerHTML = template1;
     let position = Math.floor(Math.random() * 6) + 1;
     console.log("player1 rolls ", position);
-    document.querySelector("#dice").innerHTML = position;
-    person11[3] = position;
+    // document.querySelector("#dice").innerHTML = position;
+    document.querySelector("#teamName").innerHTML = "Team 1 ";
+    person11[3] = position; //loading the dice roll value for all pawns in the team
     person12[3] = position;
     person13[3] = position;
-    magicCard.style.visibility = "visible";
-    pawn1Hidden();
+    // player1.style.visibility = "hidden";
+    // player2.style.visibility = "visible";
+    showDice(position);
+    magicCard.style.visibility = "visible"; //default magic card again
+    pawn1Hidden(); //magic card releated pawn buttons to be hidden
     pawn2Hidden();
   } else {
+    //alert for the teams if anyone rolls more than once
     alert(
       "U can only roll dice once, now Team2's chance, if u haven't moved ur pawn u can click on the desired pawn button of urs to move"
     );
+  }
+}
+
+function showDice(num) {
+  if (num == 1) {
+    let template1 =
+      '<img src="./images/dice1.png" style="width: 35px" alt="1">';
+    document.querySelector("#dice").innerHTML = template1;
+  } else if (num == 2) {
+    let template1 =
+      '<img src="./images/dice2.png" style="width: 35px" alt="2">';
+    document.querySelector("#dice").innerHTML = template1;
+  } else if (num == 3) {
+    let template1 =
+      '<img src="./images/dice3.png" style="width: 35px" alt="3">';
+    document.querySelector("#dice").innerHTML = template1;
+  } else if (num == 4) {
+    let template1 =
+      '<img src="./images/dice4.png" style="width: 35px" alt="4">';
+    document.querySelector("#dice").innerHTML = template1;
+  } else if (num == 5) {
+    let template1 =
+      '<img src="./images/dice5.png" style="width: 35px" alt="5">';
+    document.querySelector("#dice").innerHTML = template1;
+  } else if (num == 6) {
+    let template1 =
+      '<img src="./images/dice6.png" style="width: 35px" alt="6">';
+    document.querySelector("#dice").innerHTML = template1;
   }
 }
 //pawn1 team1 position and balance
@@ -163,17 +210,18 @@ const player11 = document.getElementById("player11");
 player11.addEventListener("click", changePosition11);
 
 var count = 0;
-var endpoint1 = 0;
+var endpoint1 = 0; //counting how many pawns reached endpoint in team1
 
 function changePosition11(old, currentPos) {
-  old = person11[1];
-  currentPos = person11[3];
+  old = person11[1]; //old position of pawn before rolling
+  currentPos = person11[3]; //dice roll value
   person12[3] = 0;
-  person13[3] = 0;
+  person13[3] = 0; //making sure with one roll we can't move all three pawns
   if (currentPos == 1 && old < 0) {
-    var newPosition = old + currentPos;
+    //initial conditions when pawn is in home, checking for 1
+    var newPosition = old + currentPos; //adding them to get final position of pawn after rolling dice
     person11[1] = newPosition;
-    document.querySelector("#item11").innerHTML = money[newPosition]; //pawn position
+    document.querySelector("#item11").innerHTML = money[newPosition]; //display of pawn position in number
     person11[3] = 0;
     console.log(" count" + count);
     if (newPosition >= 0) {
@@ -181,19 +229,21 @@ function changePosition11(old, currentPos) {
       img11.style.visibility = "hidden";
     }
     let template =
-      '<img src="./images/img11.jpg" id="img111" alt="green" style="width: 35px" ></img>';
-    arrdiv[newPosition].innerHTML += template;
+      '<img src="./images/img11.png" id="img111" alt="green" ></img>';
+    arrdiv[newPosition].innerHTML += template; //displaying the pawn on the board
     console.log(person11[1]);
     changeMoney1(person11[1]);
   } else if (currentPos > 0 && old >= 0) {
+    //movement of pawn, when it is in the board previously also
     count++;
     var newPosition = old + currentPos;
     console.log(newPosition);
-    pawn11M(newPosition, currentPos);
+    pawn11M(newPosition, currentPos); //calling the function for display and movement of pawn in the board
   } else if (currentPos != 1 && old < 0) {
+    //msg for players that they can't move pawn from home until u get 1
     alert("u can only move the coin when the player rolls dice 1");
   } else {
-    alert("u have already moved the pawn")
+    alert("u have already moved the pawn");
   }
 }
 console.log("endpoint", endpoint1);
@@ -220,7 +270,7 @@ function changePosition12(old, currentPos) {
       img12.style.visibility = "hidden";
     }
     let template =
-      '<img src="./images/img11.jpg" id="img121" alt="green" style="width: 35px" ></img>';
+      '<img src="./images/img11.png" id="img121" alt="green"  ></img>';
     arrdiv[newPosition].innerHTML += template;
     console.log(person12[1]);
     changeMoney1(person12[1]);
@@ -231,7 +281,7 @@ function changePosition12(old, currentPos) {
   } else if (currentPos != 1 && old < 0) {
     alert("u can only move the coin when the player rolls dice 1");
   } else {
-    alert("u have already moved the pawn")
+    alert("u have already moved the pawn");
   }
 }
 
@@ -256,7 +306,7 @@ function changePosition13(old, currentPos) {
       img13.style.visibility = "hidden";
     }
     let template =
-      '<img src="./images/img11.jpg" id="img131" alt="green" style="width: 35px" ></img>';
+      '<img src="./images/img11.png" id="img131" alt="green"  ></img>';
     arrdiv[newPosition].innerHTML += template;
     console.log(person13[1]);
     changeMoney1(person13[1]);
@@ -267,25 +317,26 @@ function changePosition13(old, currentPos) {
   } else if (currentPos != 1 && old < 0) {
     alert("u can only move the coin when the player rolls dice 1");
   } else {
-    alert("u have already moved the pawn")
+    alert("u have already moved the pawn");
   }
 }
 //movements of pawn after birth
 function pawn11M(newPosition, currentPos) {
   if (newPosition == 47) {
-    //end point
+    //end point, hidding the pawn and it's button
     var butt11 = document.getElementById("player11"); //button to move the pawn
     butt11.style.visibility = "hidden";
-    //document.querySelector("#player11").innerHTML = "HOME";
     var pos11 = document.getElementById("item11"); //display the position of pawn
     pos11.style.visibility = "hidden";
     var elem = document.getElementById("img111");
     elem.remove();
     endpoint1++;
-    console.log("endpoint", endpoint1);
-    // document.querySelector("#end1").innerHTML = endpoint1;
+    console.log("endpoint", endpoint1); // document.querySelector("#end1").innerHTML = endpoint1;
     if (endpoint1 == 3) {
       document.querySelector(".item3").innerHTML = "Team1 won";
+      alert("Congratulations Team1🥳🥳, U have won this game");
+    } else {
+      alert("Congratulations Team1🥳🥳, one of ur pawn has reached End point");
     }
   } else if (newPosition > 47) {
     alert(
@@ -296,7 +347,7 @@ function pawn11M(newPosition, currentPos) {
   } else {
     person11[1] = newPosition;
     document.querySelector("#item11").innerHTML = money[newPosition]; //pawn position
-    var match2 = 0;
+    var match2 = 0; //checking whether the pawn is in opp safe box
     for (i = 0; i < safeArr2.length; i++) {
       if (person11[1] == safeArr2[i]) {
         match2++;
@@ -338,7 +389,7 @@ function pawn11M(newPosition, currentPos) {
     }
 
     let template =
-      '<img src="./images/img11.jpg" id="img111" alt="green" style="width: 35px" ></img>';
+      '<img src="./images/img11.png" id="img111" alt="green"  ></img>';
     arrdiv[newPosition].innerHTML += template;
     console.log(person11[1]);
     changeMoney1(person11[1]);
@@ -358,6 +409,9 @@ function pawn12M(newPosition, currentPos) {
     // document.querySelector("#end1").innerHTML = endpoint1;
     if (endpoint1 == 3) {
       document.querySelector(".item3").innerHTML = "Team1 won";
+      alert("Congratulations Team1🥳🥳, U have won this game");
+    } else {
+      alert("Congratulations Team1🥳🥳, one of ur pawn has reached End point");
     }
   } else if (newPosition > 47) {
     alert(
@@ -410,7 +464,7 @@ function pawn12M(newPosition, currentPos) {
     }
 
     let template =
-      '<img src="./images/img11.jpg" id="img121" alt="green" style="width: 35px" ></img>';
+      '<img src="./images/img11.png" id="img121" alt="green"  ></img>';
     arrdiv[newPosition].innerHTML += template;
     console.log(person12[1]);
     changeMoney1(person12[1]);
@@ -431,6 +485,9 @@ function pawn13M(newPosition, currentPos) {
     // document.querySelector("#end1").innerHTML = endpoint1;
     if (endpoint1 == 3) {
       document.querySelector(".item3").innerHTML = "Team1 won";
+      alert("Congratulations Team1🥳🥳, U have won this game");
+    } else {
+      alert("Congratulations Team1🥳🥳, one of ur pawn has reached End point");
     }
   } else if (newPosition > 47) {
     alert(
@@ -483,7 +540,7 @@ function pawn13M(newPosition, currentPos) {
     }
 
     let template =
-      '<img src="./images/img11.jpg" id="img131" alt="green" style="width: 35px" ></img>';
+      '<img src="./images/img11.png" id="img131" alt="green"  ></img>';
     arrdiv[newPosition].innerHTML += template;
     console.log(person13[1]);
     changeMoney1(person13[1]);
@@ -503,6 +560,7 @@ function changeMoney1(pos) {
     document.querySelector(".item3").innerHTML = updateMoney;
   } else {
     document.querySelector(".item3").innerHTML = "Team2 win";
+    alert("Congratulations Team2🥳🥳, U have won this game");
   }
 }
 
@@ -522,10 +580,14 @@ function rollDice2() {
     let position = Math.floor(Math.random() * 6) + 1;
     console.log("player2 rolls ", position);
     document.querySelector("#dice").innerHTML = position; //dice value
+    document.querySelector("#teamName").innerHTML = "Team 2";
     person21[3] = position;
     person22[3] = position;
     person23[3] = position;
+    showDice(position);
     magicCard.style.visibility = "visible";
+    // player2.style.visibility = "hidden";
+    // player1.style.visibility = "visible";
     pawn1Hidden();
     pawn2Hidden();
   } else {
@@ -557,7 +619,7 @@ function changePosition21(old, currentPos) {
       img21.style.visibility = "hidden";
     }
     let template =
-      '<img src="./images/img22.jpg" id="img221" alt="red" style="width: 35px" ></img>';
+      '<img src="./images/img22.png" id="img221" alt="red"  ></img>';
     arrdiv[newPosition].innerHTML += template;
     console.log(person21[1]);
     changeMoney2(person21[1]);
@@ -569,7 +631,7 @@ function changePosition21(old, currentPos) {
   } else if (currentPos != 1 && old < 0) {
     alert("u can only move the coin when the player rolls dice 1");
   } else {
-    alert("u have already moved the pawn")
+    alert("u have already moved the pawn");
   }
 }
 
@@ -588,6 +650,9 @@ function pawn21M(newPosition, currentPos) {
     document.querySelector("#end2").innerHTML = endpoint2;
     if (endpoint2 == 3) {
       document.querySelector(".item4").innerHTML = "Team2 won";
+      alert("Congratulations Team2🥳🥳, U have won this game");
+    } else {
+      alert("Congratulations Team2🥳🥳, one of ur pawn has reached End point");
     }
   } else if (newPosition > 47) {
     alert(
@@ -640,7 +705,7 @@ function pawn21M(newPosition, currentPos) {
     }
 
     let template =
-      '<img src="./images/img22.jpg" id="img221" alt="red" style="width: 35px" ></img>';
+      '<img src="./images/img22.png" id="img221" alt="red" ></img>';
     arrdiv[newPosition].innerHTML += template;
     console.log(person21[1]);
     changeMoney2(person21[1]);
@@ -669,7 +734,7 @@ function changePosition22(old, currentPos) {
       img22.style.visibility = "hidden";
     }
     let template =
-      '<img src="./images/img22.jpg" id="img222" alt="red" style="width: 35px" ></img>';
+      '<img src="./images/img22.png" id="img222" alt="red"  ></img>';
     arrdiv[newPosition].innerHTML += template;
     console.log(person22[1]);
     changeMoney2(person22[1]);
@@ -680,7 +745,7 @@ function changePosition22(old, currentPos) {
   } else if (currentPos != 1 && old < 0) {
     alert("u can only move the coin when the player rolls dice 1");
   } else {
-    alert("u have already moved the pawn")
+    alert("u have already moved the pawn");
   }
 }
 
@@ -697,6 +762,9 @@ function pawn22M(newPosition, currentPos) {
     document.querySelector("#end2").innerHTML = endpoint2;
     if (endpoint2 == 3) {
       document.querySelector(".item4").innerHTML = "Team2 won";
+      alert("Congratulations Team2🥳🥳, U have won this game");
+    } else {
+      alert("Congratulations Team2🥳🥳, one of ur pawn has reached End point");
     }
   } else if (newPosition > 47) {
     alert(
@@ -749,7 +817,7 @@ function pawn22M(newPosition, currentPos) {
     }
 
     let template =
-      '<img src="./images/img22.jpg" id="img222" alt="red" style="width: 35px" ></img>';
+      '<img src="./images/img22.png" id="img222" alt="red"  ></img>';
     arrdiv[newPosition].innerHTML += template;
     console.log(person22[1]);
     changeMoney2(person22[1]);
@@ -777,7 +845,7 @@ function changePosition23(old, currentPos) {
       img23.style.visibility = "hidden";
     }
     let template =
-      '<img src="./images/img22.jpg" id="img231" alt="green" style="width: 35px" ></img>';
+      '<img src="./images/img22.png" id="img231" alt="green"  ></img>';
     arrdiv[newPosition].innerHTML += template;
     console.log(person23[1]);
     changeMoney2(person23[1]);
@@ -788,7 +856,7 @@ function changePosition23(old, currentPos) {
   } else if (currentPos != 1 && old < 0) {
     alert("u can only move the coin when the player rolls dice 1");
   } else {
-    alert("u have already moved the pawn")
+    alert("u have already moved the pawn");
   }
 }
 
@@ -805,6 +873,9 @@ function pawn23M(newPosition, currentPos) {
     document.querySelector("#end2").innerHTML = endpoint2;
     if (endpoint2 == 3) {
       document.querySelector(".item4").innerHTML = "Team2 won";
+      alert("Congratulations Team2🥳🥳, U have won this game");
+    } else {
+      alert("Congratulations Team2🥳🥳, one of ur pawn has reached End point");
     }
   } else if (newPosition > 47) {
     alert(
@@ -815,7 +886,7 @@ function pawn23M(newPosition, currentPos) {
   } else {
     person23[1] = newPosition;
     document.querySelector("#item23").innerHTML = money[newPosition];
-    var match1 = 0; //count of similar elements of the pawn position and safeArr1 
+    var match1 = 0; //count of similar elements of the pawn position and safeArr1
     for (i = 0; i < safeArr1.length; i++) {
       if (person23[1] == safeArr1[i]) {
         match1++;
@@ -858,7 +929,7 @@ function pawn23M(newPosition, currentPos) {
     }
 
     let template =
-      '<img src="./images/img22.jpg" id="img231" alt="red" style="width: 35px" ></img>';
+      '<img src="./images/img22.png" id="img231" alt="red"  ></img>';
     arrdiv[newPosition].innerHTML += template;
     console.log(person23[1]);
     changeMoney2(person23[1]);
@@ -878,6 +949,7 @@ function changeMoney2(pos) {
     document.querySelector(".item4").innerHTML = updateMoney;
   } else {
     document.querySelector(".item4").innerHTML = "player1 win";
+    alert("Congratulations Team1🥳🥳, U have won this game");
   }
 }
 
@@ -968,7 +1040,7 @@ function display_random_image(n) {
   }
   // display the image
   magicCard.style.visibility = "hidden";
-  document.body.appendChild(newImage).style.margin = "420px 0px 0px 1000px";
+  document.body.appendChild(newImage).style.margin = "395px 0px 0px 1000px";
   console.log(newImage);
   //document.getElementById("image").innerHTML = newImage;//document.body.image.appendChild(newImage);;
   //document.body.write(newImage)
@@ -987,7 +1059,9 @@ function rewards(imn, n) {
     console.log("flip", flip1);
     if (flip1 > 6) {
       magicCard.style.visibility = "visible";
-      alert("You have used the magic card for maximum number of times in this game i.e 6 times");
+      alert(
+        "You have used the magic card for maximum number of times in this game i.e 6 times"
+      );
     } else {
       document.querySelector("#card1").innerHTML = flip1;
       var bonusCoins = 0;
@@ -1007,38 +1081,65 @@ function rewards(imn, n) {
         pawn23.addEventListener("click", zero23);
 
         function zero21() {
-          if (n == 1) {
-            person21[1] = -1;
-            img21.style.visibility = "visible";
-            var elem = document.getElementById("img221"); //removing pawn from old place
-            document.querySelector("#item21").innerHTML = 0;
-            elem.remove();
-            pawn2Hidden();
+          //killing the pawn1 of team2
+          if (n == 1 && once == 1) {
+            if (person21[1] < 48 && person21[1] >= 0) {
+              //checking whether it reached endpoint or not, can't kill if it reached end point
+              once++;
+              person21[1] = -1;
+              img21.style.visibility = "visible";
+              var elem = document.getElementById("img221"); //removing pawn from old place
+              document.querySelector("#item21").innerHTML = 0;
+              elem.remove();
+              pawn2Hidden();
+            } else {
+              alert(
+                "U can't kill the pawn which has reached end point or at the home, choose other pawn"
+              );
+            }
           }
         }
 
         function zero22() {
-          if (n == 1) {
-            person22[1] = -1;
-            img22.style.visibility = "visible";
-            var elem = document.getElementById("img222"); //removing pawn from old place
-            elem.remove();
-            document.querySelector("#item22").innerHTML = 0;
-            pawn2Hidden();
+          //killing the pawn2 of team2
+          if (n == 1 && once == 1) {
+            if (person22[1] < 48 && person22[1] >= 0) {
+              //checking whether it reached endpoint or not, can't kill if it reached end point
+              once++;
+              person22[1] = -1;
+              img22.style.visibility = "visible";
+              var elem = document.getElementById("img222"); //removing pawn from old place
+              elem.remove();
+              document.querySelector("#item22").innerHTML = 0;
+              pawn2Hidden();
+            } else {
+              alert(
+                "U can't kill the pawn which has reached end point or at the home, choose other pawn"
+              );
+            }
           }
         }
 
         function zero23() {
-          if (n == 1) {
-            person23[1] = -1;
-            img23.style.visibility = "visible";
-            var elem = document.getElementById("img231"); //removing pawn from old place
-            elem.remove();
-            document.querySelector("#item23").innerHTML = 0;
-            pawn2Hidden();
+          //killing the pawn3 of team2
+          if (n == 1 && once == 1) {
+            if (person23[1] < 48 && person23[1] >= 0) {
+              once++;
+              person23[1] = -1;
+              img23.style.visibility = "visible";
+              var elem = document.getElementById("img231"); //removing pawn from old place
+              elem.remove();
+              document.querySelector("#item23").innerHTML = 0;
+              pawn2Hidden();
+            } else {
+              alert(
+                "U can't kill the pawn which has reached end point or at the home, choose other pawn"
+              );
+            }
           }
         }
       } else if (imn >= 5) {
+        //for +5, -5, +7 places
         pawn1Visible();
         pawn11.addEventListener("click", zero11);
         pawn12.addEventListener("click", zero12);
@@ -1046,45 +1147,48 @@ function rewards(imn, n) {
 
         function zero11() {
           if (imn == 5 && n == 1 && once == 1) {
-            once++;
             //5 places add
             if (person11[1] + 5 < 48 && person11[1] >= 0) {
+              once++;
               person11[1] += 5;
               var newPosition = person11[1];
               person11[2] = person11[2] + money[person11[1]];
               pawn11M(newPosition);
               pawn1Hidden();
             } // if (person11[1] > 0)
-            else {
+            else if (person11[1] > 0) {
+              once++;
               newPosition = person11[1] + (47 - person11[1]);
               pawn11M(newPosition);
               pawn1Hidden();
             }
           }
           if (imn == 6 && n == 1 && once == 1) {
-            once++;
             //7 places add
             if (person11[1] + 7 < 48 && person11[1] >= 0) {
+              once++;
               person11[1] += 7;
               var newPosition = person11[1];
               person11[2] = person11[2] + money[person11[1]];
               pawn11M(newPosition);
               pawn1Hidden();
             } else if (person11[1] > 0) {
+              once++;
               newPosition = person11[1] + (47 - person11[1]);
               pawn11M(newPosition);
               pawn1Hidden();
             }
           }
           if (imn == 7 && n == 1 && once == 1) {
-            once++;
             //5 blaces back
             if (person11[1] - 5 > 0 && person11[1] >= 0) {
+              once++;
               var newPosition = person11[1] - 5;
               person11[2] = person11[2] + money[newPosition];
               pawn11M(newPosition);
               pawn1Hidden();
             } else if (person11[1] >= 0) {
+              once++;
               newPosition = 0;
               pawn11M(newPosition);
               pawn1Hidden();
@@ -1094,9 +1198,9 @@ function rewards(imn, n) {
 
         function zero12() {
           if (imn == 5 && n == 1 && once == 1) {
-            once++;
             console.log("person12", person12[1]);
             if (person12[1] + 5 < 48 && person12[1] >= 0) {
+              once++;
               console.log("person12", person12[1]);
               person12[1] += 5;
               var newPosition = person12[1];
@@ -1105,33 +1209,36 @@ function rewards(imn, n) {
               console.log("person12", person12[1]);
               pawn1Hidden();
             } else if (person12[1] > 0) {
+              once++;
               newPosition = person12[1] + (47 - person12[1]);
               pawn12M(newPosition);
               pawn1Hidden();
             }
           }
           if (imn == 6 && n == 1 && once == 1) {
-            once++;
             if (person12[1] + 7 < 48 && person12[1] >= 0) {
+              once++;
               person12[1] += 7;
               var newPosition = person12[1];
               person11[2] = person11[2] + money[person12[1]];
               pawn12M(newPosition);
               pawn1Hidden();
             } else if (person12[1] > 0) {
+              once++;
               newPosition = person12[1] + (47 - person12[1]);
               pawn12M(newPosition);
               pawn1Hidden();
             }
           }
           if (imn == 7 && n == 1 && once == 1) {
-            once++;
             if (person12[1] - 5 > 0 && person12[1] >= 0) {
+              once++;
               var newPosition = person12[1] - 5;
               person11[2] = person11[2] + money[newPosition];
               pawn12M(newPosition);
               pawn1Hidden();
             } else if (person12[1] >= 0) {
+              once++;
               newPosition = 0;
               person11[2] = person11[2] + money[person12[1]];
               pawn12M(newPosition);
@@ -1142,41 +1249,44 @@ function rewards(imn, n) {
 
         function zero13() {
           if (imn == 5 && n == 1 && once == 1) {
-            once++;
             if (person13[1] + 5 < 48 && person13[1] >= 0) {
+              once++;
               person13[1] += 5;
               var newPosition = person13[1];
               person11[2] = person11[2] + money[newPosition];
               pawn13M(newPosition);
               pawn1Hidden();
             } else if (person13[1] > 0) {
+              once++;
               newPosition = person13[1] + (47 - person13[1]);
               pawn13M(newPosition);
               pawn1Hidden();
             }
           }
           if (imn == 6 && n == 1 && once == 1) {
-            once++;
             if (person13[1] + 7 < 48 && person13[1] >= 0) {
+              once++;
               person13[1] += 7;
               var newPosition = person13[1];
               person11[2] = person11[2] + money[newPosition];
               pawn13M(newPosition);
               pawn1Hidden();
             } else if (person13[1] > 0) {
+              once++;
               newPosition = person13[1] + (47 - person13[1]);
               pawn13M(newPosition);
               pawn1Hidden();
             }
           }
           if (imn == 7 && n == 1 && once == 1) {
-            once++;
             if (person13[1] - 5 > 0 && person13[1] >= 0) {
+              once++;
               var newPosition = person13[1] - 5;
               person11[2] = person11[2] + money[newPosition];
               pawn13M(newPosition);
               pawn1Hidden();
             } else if (person13[1] >= 0) {
+              once++;
               newPosition = 0;
               person11[2] = person11[2] + money[newPosition];
               pawn13M(newPosition);
@@ -1185,18 +1295,21 @@ function rewards(imn, n) {
           }
         }
       }
-      person11[2] = person11[2] - 500 + bonusCoins; //reduce 500 coins for using and add the bonus
+      person11[2] = person11[2] - 500 + bonusCoins; //reduce 500 coins for using bonus card and add the gained coins
       person12[2] = person12[2] - 500 + bonusCoins;
       person13[2] = person13[2] - 500 + bonusCoins;
       document.querySelector(".item3").innerHTML = person11[2];
       // alert("You can still use the magic card for " + (6 - flip1) + " times only in this game");
     }
   } else if (n == 2) {
+    //magic card for team2
     flip2++;
     console.log("flip2", flip2);
     if (flip2 > 6) {
       magicCard.style.visibility = "visible";
-      alert("You have used the magic card for maximum number of times in this game i.e 6 times");
+      alert(
+        "You have used the magic card for maximum number of times in this game i.e 6 times"
+      );
     } else {
       document.querySelector("#card2").innerHTML = flip2;
       var once = 1;
@@ -1216,38 +1329,66 @@ function rewards(imn, n) {
         pawn13.addEventListener("click", zero13);
 
         function zero11() {
-          if (n == 2) {
-            person11[1] = -1;
-            img11.style.visibility = "visible";
-            var elem = document.getElementById("img111"); //removing pawn from old place
-            document.querySelector("#item11").innerHTML = 0;
-            elem.remove();
-            pawn1Hidden();
+          //to kill pawn1 of team1
+          if (n == 2 && once == 1) {
+            if (person11[1] < 48 && person11[1] >= 0) {
+              //checking whether it reached endpoint or not, can't kill if it reached end point
+              once++;
+              person11[1] = -1;
+              img11.style.visibility = "visible";
+              var elem = document.getElementById("img111"); //removing pawn from old place
+              document.querySelector("#item11").innerHTML = 0;
+              elem.remove();
+              pawn1Hidden();
+            } else {
+              alert(
+                "U can't kill the pawn which has reached end point or at the home, choose other pawn"
+              );
+            }
           }
         }
 
         function zero12() {
-          if (n == 2) {
-            person12[1] = -1;
-            img12.style.visibility = "visible";
-            var elem = document.getElementById("img121"); //removing pawn from old place
-            elem.remove();
-            document.querySelector("#item12").innerHTML = 0;
-            pawn1Hidden();
+          //to kill pawn2 of team1
+          if (n == 2 && once == 1) {
+            if (person12[1] < 48 && person12[1] >= 0) {
+              //checking whether it reached endpoint or not, can't kill if it reached end point
+              once++;
+              person12[1] = -1;
+              img12.style.visibility = "visible";
+              var elem = document.getElementById("img121"); //removing pawn from old place
+              elem.remove();
+              document.querySelector("#item12").innerHTML = 0;
+              pawn1Hidden();
+            } else {
+              alert(
+                "U can't kill the pawn which has reached end point or at the home, choose other pawn"
+              );
+            }
           }
         }
 
         function zero13() {
-          if (n == 2) {
-            person13[1] = -1;
-            img13.style.visibility = "visible";
-            var elem = document.getElementById("img131"); //removing pawn from old place
-            elem.remove();
-            document.querySelector("#item13").innerHTML = 0;
-            pawn1Hidden();
+          //to kill pawn3 of team1
+          if (n == 2 && once == 1) {
+            if (person13[1] < 48 && person13[1] >= 0) {
+              //checking whether it reached endpoint or not, can't kill if it reached end point
+              once++;
+              person13[1] = -1;
+              img13.style.visibility = "visible";
+              var elem = document.getElementById("img131"); //removing pawn from old place
+              elem.remove();
+              document.querySelector("#item13").innerHTML = 0;
+              pawn1Hidden();
+            } else {
+              alert(
+                "U can't kill the pawn which has reached end point or at the home, choose other pawn"
+              );
+            }
           }
         }
       } else if (imn >= 5) {
+        //for +5, +7, -5
         console.log("once", once);
         pawn2Visible();
         pawn21.addEventListener("click", zero21);
@@ -1257,43 +1398,46 @@ function rewards(imn, n) {
         function zero21() {
           if (imn == 5 && n == 2 && once == 1) {
             //5 places add
-            once++;
             if (person21[1] + 5 < 48 && person21[1] >= 0) {
+              once++;
               person21[1] += 5;
               var newPosition = person21[1];
               person21[2] = person21[2] + money[newPosition];
               pawn21M(newPosition);
               pawn2Hidden();
             } else if (person11[1] > 0) {
+              once++;
               newPosition = person11[1] + (47 - person11[1]);
               pawn21M(newPosition);
               pawn2Hidden();
             }
           }
           if (imn == 6 && n == 2 && once == 1) {
-            once++;
             //7 places add
             if (person21[1] + 7 < 48 && person21[1] >= 0) {
+              once++;
               person21[1] += 7;
               var newPosition = person21[1];
               person21[2] = person21[2] + money[newPosition];
               pawn21M(newPosition);
               pawn2Hidden();
             } else if (person21[1] > 0) {
+              once++;
               newPosition = person21[1] + (47 - person21[1]);
               pawn21M(newPosition);
               pawn2Hidden();
             }
           }
           if (imn == 7 && n == 2 && once == 1) {
-            once++;
             //5 blaces back
             if (person21[1] - 5 > 0 && person21[1] >= 0) {
+              once++;
               var newPosition = person21[1] - 5;
               person21[2] = person21[2] + money[newPosition];
               pawn21M(newPosition);
               pawn2Hidden();
             } else if (person21[1] >= 0) {
+              once++;
               newPosition = 0;
               pawn21M(newPosition);
               pawn2Hidden();
@@ -1303,41 +1447,44 @@ function rewards(imn, n) {
 
         function zero22() {
           if (imn == 5 && n == 2 && once == 1) {
-            once++;
             if (person22[1] + 5 < 48 && person22[1] >= 0) {
+              once++;
               person22[1] += 5;
               var newPosition = person22[1];
               person21[2] = person21[2] + money[newPosition];
               pawn22M(newPosition);
               pawn2Hidden();
             } else if (person22[1] > 0) {
+              once++;
               newPosition = person22[1] + (47 - person22[1]);
               pawn22M(newPosition);
               pawn2Hidden();
             }
           }
           if (imn == 6 && n == 2 && once == 1) {
-            once++;
             if (person22[1] + 7 < 48 && person22[1] >= 0) {
+              once++;
               person22[1] += 7;
               var newPosition = person22[1];
               person21[2] = person21[2] + money[newPosition];
               pawn22M(newPosition);
               pawn2Hidden();
             } else if (person22[1] > 0) {
+              once++;
               newPosition = person12[1] + (47 - person12[1]);
               pawn22M(newPosition);
               pawn2Hidden();
             }
           }
           if (imn == 7 && n == 2 && once == 1) {
-            once++;
             if (person22[1] - 5 > 0 && person22[1] >= 0) {
+              once++;
               var newPosition = person22[1] - 5;
               person21[2] = person21[2] + money[newPosition];
               pawn22M(newPosition);
               pawn2Hidden();
             } else if (person22[1] >= 0) {
+              once++;
               newPosition = 0;
               person21[2] = person21[2] + money[newPosition];
               pawn22M(newPosition);
@@ -1348,41 +1495,44 @@ function rewards(imn, n) {
 
         function zero23() {
           if (imn == 5 && n == 2 && once == 1) {
-            once++;
             if (person23[1] + 5 < 48 && person23[1] >= 0) {
+              once++;
               person23[1] += 5;
               var newPosition = person23[1];
               person21[2] = person21[2] + money[newPosition];
               pawn23M(newPosition);
               pawn2Hidden();
             } else if (person23[1] > 0) {
+              once++;
               newPosition = person23[1] + (47 - person23[1]);
               pawn23M(newPosition);
               pawn2Hidden();
             }
           }
           if (imn == 6 && n == 2 && once == 1) {
-            once++;
             if (person23[1] + 7 < 48 && person23[1] >= 0) {
+              once++;
               person23[1] += 7;
               var newPosition = person23[1];
               person21[2] = person21[2] + money[newPosition];
               pawn23M(newPosition);
               pawn2Hidden();
             } else if (person23[1] > 0) {
+              once++;
               newPosition = person23[1] + (47 - person23[1]);
               pawn23M(newPosition);
               pawn2Hidden();
             }
           }
           if (imn == 7 && n == 2 && once == 1) {
-            once++;
             if (person23[1] - 5 > 0 && person23[1] >= 0) {
+              once++;
               var newPosition = person23[1] - 5;
               person21[2] = person21[2] + money[newPosition];
               pawn23M(newPosition);
               pawn2Hidden();
             } else if (person23[1] >= 0) {
+              once++;
               newPosition = 0;
               person21[2] = person21[2] + money[newPosition];
               pawn23M(newPosition);
@@ -1428,7 +1578,7 @@ const safe = document.getElementById("safe");
 safe.addEventListener("click", SafeBox);
 
 function SafeBox() {
-  pawn1Visible();
+  pawn1Visible(); //all pawns visible
   pawn2Visible();
   pawn21.addEventListener("click", safe21);
   pawn22.addEventListener("click", safe22);
@@ -1469,44 +1619,107 @@ function SafeBox() {
   }
 
   function safeTeam1(safeNumber) {
+    //safe box for team1
+    var match1 = 0; //checking whether the pawn is in opp safe box
+    for (i = 0; i < safeArr2.length; i++) {
+      if (safeNumber == safeArr2[i]) {
+        match1++;
+        console.log("match1", match1);
+      }
+    }
+    var match12 = 0; //checking whether it's already a safe box of urs
+    for (i = 0; i < safeArr1.length; i++) {
+      if (safeNumber == safeArr1[i]) {
+        match12++;
+        console.log("match12", match12);
+      }
+    }
     if (once == 1) {
-      once++;
-      console.log(money[safeNumber]);
-      console.log("5 * money[safeNumber]", 5 * money[safeNumber]);
-      person11[2] = person11[2] - 5 * money[safeNumber];
-      document.querySelector(".item3").innerHTML = person11[2];
-      safeArr1[T1++] = safeNumber;
-      console.log(safeArr1);
-      arrdiv[safeNumber].style.backgroundColor = "greenyellow";
+      if (safeNumber >= 0 && safeNumber < 48 && match1 == 0 && match12 == 0) {
+        once++;
+        console.log(money[safeNumber]);
+        console.log("5 * money[safeNumber]", 5 * money[safeNumber]);
+        person11[2] = person11[2] - 5 * money[safeNumber];
+        document.querySelector(".item3").innerHTML = person11[2]; //displaying money after buying
+        safeArr1[T1++] = safeNumber; //array for storing the sage place box numbers of team2
+        console.log(safeArr1);
+        arrdiv[safeNumber].style.backgroundColor = "greenyellow";
+        pawn1Hidden(); //magic card releated pawn buttons to be hidden
+        pawn2Hidden();
+      } else if (match1 == 1) {
+        alert(
+          "This box is already a safe box to the opponent team, choose other box"
+        );
+      } else if (match12 == 1) {
+        alert("This box is already a safe box of urs, choose other box");
+      }
     }
   }
 
   function safeTeam2(safeNumber) {
+    var match2 = 0; //checking whether the pawn is in opp safe box
+    for (i = 0; i < safeArr1.length; i++) {
+      if (safeNumber == safeArr1[i]) {
+        match2++;
+        console.log("match2", match2);
+      }
+    }
+    var match21 = 0; //checking whether the pawn is in opp safe box
+    for (i = 0; i < safeArr2.length; i++) {
+      if (safeNumber == safeArr2[i]) {
+        match21++;
+        console.log("match21", match21);
+      }
+    }
+    //safe box for team2
     if (once == 1) {
-      once++;
-      console.log(money[safeNumber]);
-      console.log("5 * money[safeNumber]", 5 * money[safeNumber]);
-      person21[2] = person21[2] - 5 * money[safeNumber];
-      document.querySelector(".item4").innerHTML = person21[2];
-      safeArr2[T2++] = safeNumber;
-      console.log(safeArr2);
-      arrdiv[safeNumber].style.backgroundColor = "red";
+      if (safeNumber >= 0 && safeNumber < 48 && match2 == 0 && match21 == 0) {
+        once++;
+        console.log(money[safeNumber]);
+        console.log("5 * money[safeNumber]", 5 * money[safeNumber]);
+        person21[2] = person21[2] - 5 * money[safeNumber];
+        document.querySelector(".item4").innerHTML = person21[2]; //displaying money after buying
+        safeArr2[T2++] = safeNumber; //array for storing the sage place box numbers of team2
+        console.log(safeArr2);
+        arrdiv[safeNumber].style.backgroundColor = "orangered";
+        pawn1Hidden(); //magic card releated pawn buttons to be hidden
+        pawn2Hidden();
+      } else if (match2 == 1) {
+        alert(
+          "This box is already a safe box to the opponent team, choose other box"
+        );
+      } else if (match21 == 1) {
+        alert("This box is already a safe box of urs, choose other box");
+      }
     }
   }
 }
 
-// function openForm() {
-//   document.getElementById("myForm").style.display = "block";
-// }
+const instructions = document.getElementById("but1");
+instructions.addEventListener("click", openForm);
+const instructionsClose = document.getElementById("close1");
+instructionsClose.addEventListener("click", closeForm);
+const faq = document.getElementById("but2");
+faq.addEventListener("click", openForm1);
+const faqClose = document.getElementById("close2");
+faqClose.addEventListener("click", closeForm1);
 
-// function openForm1() {
-//   document.getElementById("myForm1").style.display = "block";
-// }
+function openForm() {
+  //instructions to be displayed, when we click on instructions button
+  document.getElementById("myForm").style.display = "block";
+}
 
-// function closeForm() {
-//   document.getElementById("myForm").style.display = "none";
-// }
+function openForm1() {
+  //instructions closing when we click close
+  document.getElementById("myForm1").style.display = "block";
+}
 
-// function closeForm1() {
-//   document.getElementById("myForm1").style.display = "none";
-// }
+function closeForm() {
+  //faqs to be displayed, when we click on faqs button
+  document.getElementById("myForm").style.display = "none";
+}
+
+function closeForm1() {
+  //faq's closing when we click close
+  document.getElementById("myForm1").style.display = "none";
+}

@@ -1,303 +1,332 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400;700;800&display=swap");
 
 * {
-    padding: 0%;
-    margin: 0%;
-    box-sizing: border-box;
-
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Nunito Sans', sans-serif;
-    overflow: hidden;
-    width: 100%;
-    height: auto;
-    /* background-color: whitesmoke; */
+  font-family: "Nunito Sans", sans-serif;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  background-color: whitesmoke;
+  /* background-image: url(./images/—Pngtree—fantasy\game\entertainment\dice\design_1015264.jpg); */
+  /* background-image: url(./images/—Pngtree—romantic\beauty\beautiful\background\gradient_934128.jpg);
+  opacity: 1; */
+  /* background-image: url(./images/background1.jpg); */
 }
 
 .container {
-    display: grid;
-    grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px;
-    margin-left: 5px;
-    font-family: 'Nunito Sans', sans-serif;
-
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px;
+  margin-left: 5px;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 .box {
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    border-style: solid;
-    border-width: 2px 2px;
-    height: 100px;
-    width: 100px;
-    color: #cc3300;
-    border-color: black;
-    font-size: 1.65em;
-    font-weight: 700;
-    /* background-color: #66ffd9; */
-    background-color: #99ffe6;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  border-style: solid;
+  border-width: 2px 2px;
+  height: 100px;
+  width: 100px;
+  color: #cc3300;
+  border-color: black;
+  font-size: 1.65em;
+  font-weight: 700;
+  /* background-color: #66ffd9; */
+  /* background-color: #99ffe6; */
+  background-color: #99ffcc;
+  /* background-color: wheat; */
+  /* background-color: #00cccc; */
+  /* background-color: rgb(0, 204, 204, 0.8); */
 }
 
 #box48 {
-    align-items: center;
-    justify-content: center;
-    font-size: 1.8em;
-    font-weight: 600;
-    padding-left: 10px;
-    /* background-color: goldenrod; */
-    /* background-color: #ffb366; */
-    background-color: #99ffe6;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8em;
+  font-weight: 600;
+  padding-left: 10px;
+  /* background-color: goldenrod; */
+  /* background-color: #ffb366; */
+  /* background-color: #99ffe6; */
 }
 
 .button,
 .button1 {
-    background-color: coral;
-    width: 110px;
-    height: 30px;
-    border-radius: 10px;
-    margin-right: 80px;
-    font-weight: 600;
-    font-size: 1.3em;
-    margin-bottom: 2px;
-    opacity: 0.9;
-
+  background-color: coral;
+  width: 110px;
+  height: 30px;
+  border-radius: 10px;
+  margin-right: 80px;
+  font-weight: 600;
+  font-size: 1.3em;
+  margin-bottom: 2px;
+  opacity: 0.9;
+  /* background-color: rgba(53, 155, 155, 0.3); */
 }
 
 .button1 {
-    width: 150px;
-    margin-right: 30px;
+  width: 150px;
+  margin-right: 30px;
 }
 
 .split {
-    height: 100%;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    overflow-x: hidden;
-    padding-top: 20px;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
 }
 
 .left {
-    left: 0;
-    width: 65%;
-    padding-left: 30px;
-
-    /* background-color: aquamarine; */
+  left: 0;
+  width: 65%;
+  padding-left: 30px;
+  /* background-image: url(./images/—Pngtree—fantasy\ game\ entertainment\ dice\ design_1015264.jpg);
+    opacity: 1; */
+  /* background-color: aquamarine; */
+  /* background-color: rgb(0, 204, 204); */
 }
 
 .right {
-    right: 0;
-    width: 35%;
+  right: 0;
+  width: 35%;
+  /* background-color: #9999ff; */
+  /* background-image: url(./images/—Pngtree—fantasy\ game\ entertainment\ dice\ design_1015264.jpg);
+    opacity: 1; */
+  /* background-color: rgba(53, 155, 155, 0.3); */
 }
 
 .team-names {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 10px;
-    margin-left: 5px;
-    font-size: 1.5em;
-    font-weight: 700;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 10px;
+  margin-left: 5px;
+  font-size: 1.5em;
+  font-weight: 700;
 }
 
 .teams {
-    margin-left: 5px;
-    margin-top: 10px;
-    display: grid;
-    grid-template-columns: 398px 398px;
-    grid-column-gap: 10px;
-
+  margin-left: 5px;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 398px 398px;
+  grid-column-gap: 10px;
 }
 
 .team1-box,
 .team2-box {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    border-style: solid;
-    border-width: 3px;
-    border-radius: 10px;
-    border-color: black;
-    grid-column-gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 10px;
+  border-color: black;
+  grid-column-gap: 10px;
 }
 
-
 .pawn {
-    padding-left: 10px;
-    height: 50px;
+  padding-left: 10px;
+  height: 40px;
+}
+
+#img111,
+#img121,
+#img131,
+#img221,
+#img222,
+#img231 {
+  height: 40px;
+  /* width: 20px; */
 }
 
 .money {
-    display: grid;
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-bottom: 15px;
-    font-weight: 700;
-    grid-template-columns: 200px 200px 200px;
-    font-size: 1.3em;
+  display: grid;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  font-weight: 700;
+  grid-template-columns: 200px 200px 200px;
+  font-size: 1.3em;
+}
 
+#GIF {
+  background-repeat: no-repeat;
 }
 
 .roll {
-    display: grid;
-    grid-template-columns: 150px 55px;
-    margin-bottom: 15px;
+  display: grid;
+  grid-template-columns: 10px 75px 70px 50px;
+  margin-bottom: 15px;
 }
 
 .player-roll {
-    font-weight: 600;
-    font-size: 1.3em;
-    color: goldenrod;
+  font-weight: 600;
+  font-size: 1.3em;
+  /* color: goldenrod; */
 }
 
-
-
 .pawn-position {
-    display: grid;
-    grid-template-columns: 150px 55px 150px 200px;
-    margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: 150px 55px 150px 200px;
+  /* margin-bottom: px; */
 }
 
 .item {
-    font-weight: 600;
-    font-size: 1.3em;
+  font-weight: 600;
+  font-size: 1.3em;
 }
 
 #player11,
 #player12,
 #player13,
 .T1 {
-    background-color: greenyellow;
+  background-color: greenyellow;
 }
 
 #player21,
 #player22,
 #player23,
 .T2 {
-    background-color: red;
+  background-color: red;
 }
 
 .image {
-    height: 300px;
-    width: 320px;
+  height: 300px;
+  width: 320px;
 }
 
 .magic-card {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .T {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 #safe {
-    font-size: 1.1em;
+  font-size: 1.1em;
 }
 
 /* displaying the count of how many pawns reached end point */
 .MagicCard {
-    display: grid;
-    grid-template-columns: 180px 30px 30px 100px 200px;
-    font-weight: 500;
-    font-size: 1.3em;
+  display: grid;
+  grid-template-columns: 180px 30px 30px 100px 200px;
+  font-weight: 600;
+  font-size: 1.3em;
 }
 
 h1 {
-    margin-left: 470px;
+  margin-left: 470px;
 }
 
 /* Button used to 
 open the instructions - fixed at the top of the page */
 .open-button {
-    background-color: white;
-    color: black;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    opacity: 1;
-    position: fixed;
-    top: 5px;
-    right: 28px;
-    width: 90px;
-    font-family: "Times New Roman", Times, serif;
-    font-weight: 900;
-    /* height: 40px; */
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  top: 5px;
+  right: 28px;
+  width: 90px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 900;
+  /* height: 40px; */
+  /* background-color: rgb(0, 204, 204, 0.6); */
 }
 
-
+/* faq button */
 #but2 {
-    right: 28px;
-    top: 50px;
-    height: 28px;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
+  right: 28px;
+  top: 50px;
+  height: 28px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 }
 
 /* Instructions - hidden by default */
 .popup {
-    display: none;
-    position: fixed;
-    bottom: 0;
-    right: 15px;
-    border: 3px solid #f1f1f1;
-    z-index: 9;
-    font-family: "Times New Roman", Times, serif;
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+  font-family: "Times New Roman", Times, serif;
 }
 
 /* Add styles to the form container */
 .form-container {
-    max-width: 1700px;
-    padding: 10px;
-    background-color: whitesmoke;
-    top: 0;
+  max-width: 1700px;
+  padding: 10px;
+  background-color: whitesmoke;
+  top: 0;
 }
 
 p {
-    padding-left: 15px;
-    padding-bottom: 8px;
+  padding-left: 15px;
+  padding-bottom: 8px;
 }
 
 h3 {
-    padding-bottom: 8px;
+  padding-bottom: 8px;
 }
 
 h2 {
-    padding-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 #start {
-    padding-left: 15px;
+  padding-left: 15px;
 }
 
 #Brief {
-    padding-left: 22px;
-    padding-right: 10px;
+  padding-left: 22px;
+  padding-right: 10px;
 }
 
 .cancel {
-    background-color: rgb(255, 41, 0);
-    opacity: 0.8;
-    width: 70px;
-    height: 30px;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
+  background-color: rgb(255, 41, 0);
+  opacity: 0.8;
+  width: 70px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
 }
 
 .h3 {
-    color: black;
+  color: black;
 }
 
 strong {
-    opacity: 0.8;
+  opacity: 0.8;
 }
-
 
 /* Add some hover effects to buttons */
 .form-container .btn:hover,
-.open-button:hover,
-.button:hover,
-.button1:hover {
-    opacity: 1;
+.open-button:hover
+
+/* .button:hover,
+.button1:hover { */
+  {
+  opacity: 1;
+  /* background-color: rgb(0, 204, 204, 1); */
+}
+
+.magic {
+  opacity: 1;
+
 }
