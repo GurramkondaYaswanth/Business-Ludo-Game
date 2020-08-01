@@ -324,6 +324,7 @@ function changePosition13(old, currentPos) {
 function pawn11M(newPosition, currentPos) {
   if (newPosition == 47) {
     //end point, hidding the pawn and it's button
+    person11[1] = newPosition;
     var butt11 = document.getElementById("player11"); //button to move the pawn
     butt11.style.visibility = "hidden";
     var pos11 = document.getElementById("item11"); //display the position of pawn
@@ -398,6 +399,7 @@ function pawn11M(newPosition, currentPos) {
 
 function pawn12M(newPosition, currentPos) {
   if (newPosition == 47) {
+    person12[1] = newPosition;
     var butt12 = document.getElementById("player12");
     butt12.style.visibility = "hidden";
     var pos12 = document.getElementById("item12");
@@ -474,6 +476,7 @@ function pawn12M(newPosition, currentPos) {
 function pawn13M(newPosition, currentPos) {
   person13[1] = newPosition;
   if (newPosition == 47) {
+    person13[1] = newPosition;
     var butt13 = document.getElementById("player13");
     butt13.style.visibility = "hidden";
     var pos13 = document.getElementById("item13");
@@ -638,6 +641,7 @@ function changePosition21(old, currentPos) {
 function pawn21M(newPosition, currentPos) {
   if (newPosition == 47) {
     //end point
+    person21[1] = newPosition;
     var butt21 = document.getElementById("player21");
     butt21.style.visibility = "hidden";
     var pos21 = document.getElementById("item21");
@@ -647,7 +651,7 @@ function pawn21M(newPosition, currentPos) {
     elem.remove();
     endpoint2++;
     console.log("endpoint", endpoint2);
-    document.querySelector("#end2").innerHTML = endpoint2;
+    // document.querySelector("#end2").innerHTML = endpoint2;
     if (endpoint2 == 3) {
       document.querySelector(".item4").innerHTML = "Team2 won";
       alert("Congratulations Team2🥳🥳, U have won this game");
@@ -751,6 +755,7 @@ function changePosition22(old, currentPos) {
 
 function pawn22M(newPosition, currentPos) {
   if (newPosition == 47) {
+    person22[1] = newPosition;
     var butt22 = document.getElementById("player22");
     butt22.style.visibility = "hidden";
     var pos22 = document.getElementById("item22");
@@ -759,7 +764,7 @@ function pawn22M(newPosition, currentPos) {
     elem.remove();
     endpoint2++;
     console.log("endpoint", endpoint2);
-    document.querySelector("#end2").innerHTML = endpoint2;
+    // document.querySelector("#end2").innerHTML = endpoint2;
     if (endpoint2 == 3) {
       document.querySelector(".item4").innerHTML = "Team2 won";
       alert("Congratulations Team2🥳🥳, U have won this game");
@@ -862,6 +867,7 @@ function changePosition23(old, currentPos) {
 
 function pawn23M(newPosition, currentPos) {
   if (newPosition == 47) {
+    person23[1] = newPosition;
     var butt23 = document.getElementById("player23");
     butt23.style.visibility = "hidden";
     var pos23 = document.getElementById("item23");
@@ -870,7 +876,7 @@ function pawn23M(newPosition, currentPos) {
     elem.remove();
     endpoint2++;
     console.log("endpoint", endpoint2);
-    document.querySelector("#end2").innerHTML = endpoint2;
+    // document.querySelector("#end2").innerHTML = endpoint2;
     if (endpoint2 == 3) {
       document.querySelector(".item4").innerHTML = "Team2 won";
       alert("Congratulations Team2🥳🥳, U have won this game");
@@ -1083,7 +1089,7 @@ function rewards(imn, n) {
         function zero21() {
           //killing the pawn1 of team2
           if (n == 1 && once == 1) {
-            if (person21[1] < 48 && person21[1] >= 0) {
+            if (person21[1] < 47 && person21[1] >= 0) {
               //checking whether it reached endpoint or not, can't kill if it reached end point
               once++;
               person21[1] = -1;
@@ -1103,7 +1109,7 @@ function rewards(imn, n) {
         function zero22() {
           //killing the pawn2 of team2
           if (n == 1 && once == 1) {
-            if (person22[1] < 48 && person22[1] >= 0) {
+            if (person22[1] < 47 && person22[1] >= 0) {
               //checking whether it reached endpoint or not, can't kill if it reached end point
               once++;
               person22[1] = -1;
@@ -1123,7 +1129,7 @@ function rewards(imn, n) {
         function zero23() {
           //killing the pawn3 of team2
           if (n == 1 && once == 1) {
-            if (person23[1] < 48 && person23[1] >= 0) {
+            if (person23[1] < 47 && person23[1] >= 0) {
               once++;
               person23[1] = -1;
               img23.style.visibility = "visible";
@@ -1331,7 +1337,7 @@ function rewards(imn, n) {
         function zero11() {
           //to kill pawn1 of team1
           if (n == 2 && once == 1) {
-            if (person11[1] < 48 && person11[1] >= 0) {
+            if (person11[1] < 47 && person11[1] >= 0) {
               //checking whether it reached endpoint or not, can't kill if it reached end point
               once++;
               person11[1] = -1;
@@ -1351,7 +1357,7 @@ function rewards(imn, n) {
         function zero12() {
           //to kill pawn2 of team1
           if (n == 2 && once == 1) {
-            if (person12[1] < 48 && person12[1] >= 0) {
+            if (person12[1] < 47 && person12[1] >= 0) {
               //checking whether it reached endpoint or not, can't kill if it reached end point
               once++;
               person12[1] = -1;
@@ -1371,7 +1377,7 @@ function rewards(imn, n) {
         function zero13() {
           //to kill pawn3 of team1
           if (n == 2 && once == 1) {
-            if (person13[1] < 48 && person13[1] >= 0) {
+            if (person13[1] < 47 && person13[1] >= 0) {
               //checking whether it reached endpoint or not, can't kill if it reached end point
               once++;
               person13[1] = -1;
@@ -1578,6 +1584,7 @@ const safe = document.getElementById("safe");
 safe.addEventListener("click", SafeBox);
 
 function SafeBox() {
+  var s = 1;
   pawn1Visible(); //all pawns visible
   pawn2Visible();
   pawn21.addEventListener("click", safe21);
@@ -1635,7 +1642,7 @@ function SafeBox() {
       }
     }
     if (once == 1) {
-      if (safeNumber >= 0 && safeNumber < 48 && match1 == 0 && match12 == 0) {
+      if (safeNumber >= 0 && safeNumber < 47 && match1 == 0 && match12 == 0) {
         once++;
         console.log(money[safeNumber]);
         console.log("5 * money[safeNumber]", 5 * money[safeNumber]);
@@ -1673,7 +1680,7 @@ function SafeBox() {
     }
     //safe box for team2
     if (once == 1) {
-      if (safeNumber >= 0 && safeNumber < 48 && match2 == 0 && match21 == 0) {
+      if (safeNumber >= 0 && safeNumber < 47 && match2 == 0 && match21 == 0) {
         once++;
         console.log(money[safeNumber]);
         console.log("5 * money[safeNumber]", 5 * money[safeNumber]);
