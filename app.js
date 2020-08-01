@@ -152,11 +152,6 @@ function rollDice1() {
   diceCount1++;
   diceCount2 = 0;
   if (diceCount1 == 1) {
-    // let template1 =
-    //   '<img src="./images/dice1.png" style="width: 35px" alt="1">';
-    // // '<img src="./images/UnconsciousLegalDoe-size_restricted.gif" style="width: 35px" "background-repeat:no-repeat" id="GIF"  alt=""></img>';
-
-    // document.querySelector("#dice").innerHTML = template1;
     let position = Math.floor(Math.random() * 6) + 1;
     console.log("player1 rolls ", position);
     // document.querySelector("#dice").innerHTML = position;
@@ -349,7 +344,7 @@ function pawn11M(newPosition, currentPos) {
     person11[1] = newPosition;
     document.querySelector("#item11").innerHTML = money[newPosition]; //pawn position
     var match2 = 0; //checking whether the pawn is in opp safe box
-    for (i = 0; i < safeArr2.length; i++) {
+    for (let i = 0; i < safeArr2.length; i++) {
       if (person11[1] == safeArr2[i]) {
         match2++;
         console.log("match2", match2);
@@ -425,7 +420,7 @@ function pawn12M(newPosition, currentPos) {
     person12[1] = newPosition;
     document.querySelector("#item12").innerHTML = money[newPosition];
     var match2 = 0;
-    for (i = 0; i < safeArr2.length; i++) {
+    for (let i = 0; i < safeArr2.length; i++) {
       if (person12[1] == safeArr2[i]) {
         match2++;
         console.log("match2", match2);
@@ -502,7 +497,7 @@ function pawn13M(newPosition, currentPos) {
     document.querySelector("#item13").innerHTML = money[newPosition];
 
     var match2 = 0;
-    for (i = 0; i < safeArr2.length; i++) {
+    for (let i = 0; i < safeArr2.length; i++) {
       if (person13[1] == safeArr2[i]) {
         match2++;
         console.log("match2", match2);
@@ -668,7 +663,7 @@ function pawn21M(newPosition, currentPos) {
     person21[1] = newPosition;
     document.querySelector("#item21").innerHTML = money[newPosition];
     var match1 = 0;
-    for (i = 0; i < safeArr1.length; i++) {
+    for (let i = 0; i < safeArr1.length; i++) {
       if (person21[1] == safeArr1[i]) {
         match1++;
         console.log("match1", match1);
@@ -781,7 +776,7 @@ function pawn22M(newPosition, currentPos) {
     person22[1] = newPosition;
     document.querySelector("#item22").innerHTML = money[newPosition];
     var match1 = 0;
-    for (i = 0; i < safeArr1.length; i++) {
+    for (let i = 0; i < safeArr1.length; i++) {
       if (person22[1] == safeArr1[i]) {
         match1++;
         console.log("match1", match1);
@@ -893,7 +888,7 @@ function pawn23M(newPosition, currentPos) {
     person23[1] = newPosition;
     document.querySelector("#item23").innerHTML = money[newPosition];
     var match1 = 0; //count of similar elements of the pawn position and safeArr1
-    for (i = 0; i < safeArr1.length; i++) {
+    for (let i = 0; i < safeArr1.length; i++) {
       if (person23[1] == safeArr1[i]) {
         match1++;
         console.log("match1", match1);
@@ -1628,14 +1623,14 @@ function SafeBox() {
   function safeTeam1(safeNumber) {
     //safe box for team1
     var match1 = 0; //checking whether the pawn is in opp safe box
-    for (i = 0; i < safeArr2.length; i++) {
+    for (let i = 0; i < safeArr2.length; i++) {
       if (safeNumber == safeArr2[i]) {
         match1++;
         console.log("match1", match1);
       }
     }
     var match12 = 0; //checking whether it's already a safe box of urs
-    for (i = 0; i < safeArr1.length; i++) {
+    for (let i = 0; i < safeArr1.length; i++) {
       if (safeNumber == safeArr1[i]) {
         match12++;
         console.log("match12", match12);
@@ -1665,14 +1660,14 @@ function SafeBox() {
 
   function safeTeam2(safeNumber) {
     var match2 = 0; //checking whether the pawn is in opp safe box
-    for (i = 0; i < safeArr1.length; i++) {
+    for (let i = 0; i < safeArr1.length; i++) {
       if (safeNumber == safeArr1[i]) {
         match2++;
         console.log("match2", match2);
       }
     }
     var match21 = 0; //checking whether the pawn is in opp safe box
-    for (i = 0; i < safeArr2.length; i++) {
+    for (let i = 0; i < safeArr2.length; i++) {
       if (safeNumber == safeArr2[i]) {
         match21++;
         console.log("match21", match21);
