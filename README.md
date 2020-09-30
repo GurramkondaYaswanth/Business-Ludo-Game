@@ -25,20 +25,16 @@ About safe box
 
 About buttons
 
-Roll dice
-
+Roll dice:
   For rolling the dice (the value is displayed on below of the roll dice button as player rolls: )
   Roll dice button below the team1 is for team1 and roll dice button below the team2 is for team2
 
-Pawn buttons
-
+Pawn buttons:
   After roll dice, You need to select the pawn button corresponding to the desired pawn of ur teams to move. Pawn position will be displayed in the right of every pawn button
   Make sure u choose correct pawn button. once u selected u can't select the other pawn button in any situation
 
-Team1/Team2 flip
-
+Team1/Team2 flip:
   If team1/Team2 want to use the magic card then You should click on this button
 
-Safe box
-
+Safe box:
   If a team wants to make a box as safe box then they need to click this button and you can buy unlimited number of safe boxes, until u have enough money
